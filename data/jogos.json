@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "dia_id": "12/08",
+    "dia_titulo": "12/08/2026 - ABERTURA",
+    "modalidade": "FUTSAL MASCULINO",
+    "timeA": "FÚRIA DOS LEÕES",
+    "timeB": "TSUNAMI AZUL",
+    "placarA": null,
+    "placarB": null,
+    "horario": "08:00",
+    "status": "AGENDADO"
+  },
+  {
+    "id": 2,
+    "dia_id": "12/08",
+    "dia_titulo": "12/08/2026 - ABERTURA",
+    "modalidade": "VÔLEI FEMININO",
+    "timeA": "ELITE VERDE",
+    "timeB": "OURO PURO",
+    "placarA": null,
+    "placarB": null,
+    "horario": "09:00",
+    "status": "AGENDADO"
+  },
+  {
+    "id": 3,
+    "dia_id": "13/08",
+    "dia_titulo": "13/08/2026 - FASE DE GRUPOS",
+    "modalidade": "BASQUETE MISTO",
+    "timeA": "TERCEIRÃO A",
+    "timeB": "TERCEIRÃO B",
+    "placarA": null,
+    "placarB": null,
+    "horario": "10:00",
+    "status": "AGENDADO"
+  },
+  {
+    "id": 4,
+    "dia_id": "14/08",
+    "dia_titulo": "14/08/2026 - ELIMINATÓRIAS",
+    "modalidade": "FUTSAL MASCULINO",
+    "timeA": "ESQUADRÃO VERMELHO",
+    "timeB": "TROVÃO AZUL",
+    "placarA": null,
+    "placarB": null,
+    "horario": "08:00",
+    "status": "AGENDADO"
+  }
+]

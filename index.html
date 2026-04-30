@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINCLAP 2026 - O Portal do Interclasse</title>
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header-bg">
+        <h1>🏆 <span>JINCLAP</span> 2026</h1>
+        <nav>
+            <ul>
+                <li><a onclick="showSection('home')" class="active">Início</a></li>
+                <li><a onclick="showSection('noticias')">Notícias</a></li>
+                <li><a onclick="showSection('jogos')">Jogos & Placar</a></li>
+                <li><a onclick="showSection('chaveamentos')">Chaveamentos</a></li>
+                <li><a onclick="showSection('classificacao')">Classificação</a></li>
+                <li><a onclick="showSection('times')">Elencos</a></li>
+                <li><a onclick="showSection('arquivos')">Arquivos</a></li>
+                <li><a onclick="showSection('votacao')">Votação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO HOME / INÍCIO -->
+    <section id="home" class="active">
+        <div class="grid-container">
+            <!-- Instruções para os alunos -->
+            <div class="card" style="border-left: 4px solid var(--accent); grid-column: 1 / -1;">
+                <div class="card-body">
+                    <h3 class="card-title" style="color: var(--accent); display: flex; align-items: center; gap: 8px;">⚙️ MODO ADMINISTRADOR</h3>
+                    <p class="card-text">
+                        Este portal é 100% dinâmico. Edite a pasta <strong><code>data/</code></strong> (times, jogos, chaveamentos, arquivos, notícias). Todas as mudanças aparecerão automaticamente!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card" style="grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; text-align: center;">
+                <div class="card-body">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">🗳️</div>
+                    <h3 class="card-title">A Grande Enquete!</h3>
+                    <p class="card-text" style="margin-bottom: 1rem;">Quem vai ganhar o interclasse deste ano? Participe!</p>
+                    <button class="btn" style="width: auto;" onclick="showSection('votacao')">Votar Agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO NOTÍCIAS -->
+    <section id="noticias">
+        <div class="section-header">
+            <span class="section-icon">📰</span>
+            <h2 class="section-title">Últimas Notícias</h2>
+        </div>
+        <div class="grid-container" id="noticias-grid">
+            <!-- Preenchido via JavaScript -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO JOGOS E PLACAR -->
+    <section id="jogos">
+        <div class="section-header">
+            <span class="section-icon">⚽</span>
+            <h2 class="section-title">Agenda de Jogos</h2>
+        </div>
+        
+        <!-- Filtros Dinâmicos de Dias -->
+        <div class="dias-filter" id="dias-filter">
+            <!-- Preenchido via JavaScript -->
+        </div>
+
+        <div class="jogos-grid" id="jogos-lista">
+            <!-- Preenchido via JavaScript -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO CHAVEAMENTOS -->
+    <section id="chaveamentos">
+        <div class="section-header">
+            <span class="section-icon">🏆</span>
+            <h2 class="section-title">Chaveamentos</h2>
+        </div>
+        <div id="chaveamentos-container">
+            <!-- Preenchido via JavaScript -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO CLASSIFICAÇÃO -->
+    <section id="classificacao">
+        <div class="section-header">
+            <span class="section-icon">📊</span>
+            <h2 class="section-title">Classificação Geral</h2>
+        </div>
+        <div class="table-card">
+            <table id="tabela-classificacao">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Equipe</th>
+                        <th>PTS</th>
+                        <th>V</th>
+                        <th>D</th>
+                        <th>SG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Preenchido via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SEÇÃO TIMES -->
+    <section id="times">
+        <div class="section-header">
+            <span class="section-icon">🛡️</span>
+            <h2 class="section-title">Nossas Equipes</h2>
+        </div>
+        <div class="grid-container" id="times-grid">
+            <!-- Preenchido via JavaScript -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO ARQUIVOS -->
+    <section id="arquivos">
+        <div class="section-header">
+            <span class="section-icon">📂</span>
+            <h2 class="section-title">Central de Arquivos</h2>
+        </div>
+        <div class="grid-container" id="arquivos-grid">
+            <!-- Preenchido via JavaScript -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO VOTAÇÃO -->
+    <section id="votacao">
+        <div class="section-header" style="justify-content: center; border-bottom: none;">
+            <span class="section-icon">🗳️</span>
+            <h2 class="section-title">Votação da Galera</h2>
+        </div>
+        <div class="enquete-wrapper">
+            <h3 id="pergunta-enquete" class="pergunta-enquete">Carregando...</h3>
+            
+            <div id="form-enquete">
+                <div id="opcoes-enquete">
+                    <!-- Opções carregadas aqui -->
+                </div>
+                <button class="btn" style="width: 100%; margin-top: 1rem; font-size: 1.1rem; padding: 1rem;" onclick="registrarVoto()">Confirmar Voto</button>
+            </div>
+
+            <div id="resultados-enquete" style="display: none;">
+                <!-- Resultados renderizados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

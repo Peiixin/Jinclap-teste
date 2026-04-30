@@ -1,0 +1,31 @@
+[
+  {
+    "modalidade": "FUTSAL MASCULINO",
+    "fases": [
+      {
+        "nome": "SEMIFINAL",
+        "confrontos": [
+          { "timeA": "FÚRIA DOS LEÕES", "timeB": "ESQUADRÃO VERMELHO", "placarA": null, "placarB": null, "status": "A DEFINIR" },
+          { "timeA": "TSUNAMI AZUL", "timeB": "TROVÃO AZUL", "placarA": null, "placarB": null, "status": "A DEFINIR" }
+        ]
+      },
+      {
+        "nome": "FINAL",
+        "confrontos": [
+          { "timeA": "VENCEDOR 1", "timeB": "VENCEDOR 2", "placarA": null, "placarB": null, "status": "A DEFINIR" }
+        ]
+      }
+    ]
+  },
+  {
+    "modalidade": "BASQUETE MISTO",
+    "fases": [
+      {
+        "nome": "FINAL DIRETA",
+        "confrontos": [
+          { "timeA": "TERCEIRÃO A", "timeB": "TERCEIRÃO B", "placarA": null, "placarB": null, "status": "AGENDADO" }
+        ]
+      }
+    ]
+  }
+]
