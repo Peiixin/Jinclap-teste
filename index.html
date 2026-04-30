@@ -3,164 +3,138 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JINCLAP 2026 - O Portal do Interclasse</title>
-    <!-- CSS Personalizado -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JINCLAP 2026</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header class="header-bg">
-        <h1>🏆 <span>JINCLAP</span> 2026</h1>
-        <nav>
-            <ul>
-                <li><a onclick="showSection('home')" class="active">Início</a></li>
-                <li><a onclick="showSection('noticias')">Notícias</a></li>
-                <li><a onclick="showSection('jogos')">Jogos & Placar</a></li>
-                <li><a onclick="showSection('chaveamentos')">Chaveamentos</a></li>
-                <li><a onclick="showSection('classificacao')">Classificação</a></li>
-                <li><a onclick="showSection('times')">Elencos</a></li>
-                <li><a onclick="showSection('arquivos')">Arquivos</a></li>
-                <li><a onclick="showSection('votacao')">Votação</a></li>
-            </ul>
-        </nav>
+    <!-- TOP HEADER LIMPO -->
+    <header class="top-header">
+        <h1>JINCLAP <span>2026</span></h1>
     </header>
 
-    <!-- SEÇÃO HOME / INÍCIO -->
-    <section id="home" class="active">
-        <div class="grid-container">
-            <!-- Instruções para os alunos -->
-            <div class="card" style="border-left: 4px solid var(--accent); grid-column: 1 / -1;">
-                <div class="card-body">
-                    <h3 class="card-title" style="color: var(--accent); display: flex; align-items: center; gap: 8px;">⚙️ MODO ADMINISTRADOR</h3>
-                    <p class="card-text">
-                        Este portal é 100% dinâmico. Edite a pasta <strong><code>data/</code></strong> (times, jogos, chaveamentos, arquivos, notícias). Todas as mudanças aparecerão automaticamente!
-                    </p>
-                </div>
-            </div>
-            
-            <div class="card" style="grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; text-align: center;">
-                <div class="card-body">
-                    <div style="font-size: 3rem; margin-bottom: 10px;">🗳️</div>
-                    <h3 class="card-title">A Grande Enquete!</h3>
-                    <p class="card-text" style="margin-bottom: 1rem;">Quem vai ganhar o interclasse deste ano? Participe!</p>
-                    <button class="btn" style="width: auto;" onclick="showSection('votacao')">Votar Agora</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ÁREA PRINCIPAL -->
+    <main>
 
-    <!-- SEÇÃO NOTÍCIAS -->
-    <section id="noticias">
-        <div class="section-header">
-            <span class="section-icon">📰</span>
-            <h2 class="section-title">Últimas Notícias</h2>
-        </div>
-        <div class="grid-container" id="noticias-grid">
-            <!-- Preenchido via JavaScript -->
-        </div>
-    </section>
+        <!-- SEÇÃO HOME -->
+        <section id="home" class="active">
+            <!-- Hero Imagem (A logo gigante aqui) -->
+            <img src="img/logo-jinclap.jpg" alt="Logo Jinclap 2026" class="hero-image">
 
-    <!-- SEÇÃO JOGOS E PLACAR -->
-    <section id="jogos">
-        <div class="section-header">
-            <span class="section-icon">⚽</span>
-            <h2 class="section-title">Agenda de Jogos</h2>
-        </div>
-        
-        <!-- Filtros Dinâmicos de Dias -->
-        <div class="dias-filter" id="dias-filter">
-            <!-- Preenchido via JavaScript -->
-        </div>
-
-        <div class="jogos-grid" id="jogos-lista">
-            <!-- Preenchido via JavaScript -->
-        </div>
-    </section>
-
-    <!-- SEÇÃO CHAVEAMENTOS -->
-    <section id="chaveamentos">
-        <div class="section-header">
-            <span class="section-icon">🏆</span>
-            <h2 class="section-title">Chaveamentos</h2>
-        </div>
-        <div id="chaveamentos-container">
-            <!-- Preenchido via JavaScript -->
-        </div>
-    </section>
-
-    <!-- SEÇÃO CLASSIFICAÇÃO -->
-    <section id="classificacao">
-        <div class="section-header">
-            <span class="section-icon">📊</span>
-            <h2 class="section-title">Classificação Geral</h2>
-        </div>
-        <div class="table-card">
-            <table id="tabela-classificacao">
-                <thead>
-                    <tr>
-                        <th>Pos</th>
-                        <th>Equipe</th>
-                        <th>PTS</th>
-                        <th>V</th>
-                        <th>D</th>
-                        <th>SG</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <!-- Destaques Carrossel -->
+            <div style="margin-bottom: 2rem;">
+                <h2 class="section-title">🔥 Destaques</h2>
+                <div class="destaques-scroll horizontal-scroll" id="destaques-container">
                     <!-- Preenchido via JavaScript -->
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- SEÇÃO TIMES -->
-    <section id="times">
-        <div class="section-header">
-            <span class="section-icon">🛡️</span>
-            <h2 class="section-title">Nossas Equipes</h2>
-        </div>
-        <div class="grid-container" id="times-grid">
-            <!-- Preenchido via JavaScript -->
-        </div>
-    </section>
-
-    <!-- SEÇÃO ARQUIVOS -->
-    <section id="arquivos">
-        <div class="section-header">
-            <span class="section-icon">📂</span>
-            <h2 class="section-title">Central de Arquivos</h2>
-        </div>
-        <div class="grid-container" id="arquivos-grid">
-            <!-- Preenchido via JavaScript -->
-        </div>
-    </section>
-
-    <!-- SEÇÃO VOTAÇÃO -->
-    <section id="votacao">
-        <div class="section-header" style="justify-content: center; border-bottom: none;">
-            <span class="section-icon">🗳️</span>
-            <h2 class="section-title">Votação da Galera</h2>
-        </div>
-        <div class="enquete-wrapper">
-            <h3 id="pergunta-enquete" class="pergunta-enquete">Carregando...</h3>
-            
-            <div id="form-enquete">
-                <div id="opcoes-enquete">
-                    <!-- Opções carregadas aqui -->
                 </div>
-                <button class="btn" style="width: 100%; margin-top: 1rem; font-size: 1.1rem; padding: 1rem;" onclick="registrarVoto()">Confirmar Voto</button>
             </div>
 
-            <div id="resultados-enquete" style="display: none;">
-                <!-- Resultados renderizados aqui -->
+            <!-- Jogo da Rodada -->
+            <div style="margin-bottom: 2rem;">
+                <h2 class="section-title">⚡ O Grande Jogo</h2>
+                <div id="jogo-rodada-container">
+                    <!-- Preenchido via JavaScript -->
+                </div>
             </div>
+            
+            <button class="btn-primary" onclick="showSection('votacao')">🗳️ Ir para Votação</button>
+        </section>
+
+        <!-- SEÇÃO JOGOS -->
+        <section id="jogos">
+            <h2 class="section-title">⚽ Calendário</h2>
+            <div class="dias-tabs horizontal-scroll" id="dias-filter"></div>
+            <div class="jogos-grid" id="jogos-lista"></div>
+        </section>
+
+        <!-- SEÇÃO CLASSIFICAÇÃO -->
+        <section id="classificacao">
+            <h2 class="section-title">📊 Tabela Geral</h2>
+            <div class="tabela-wrapper">
+                <table id="tabela-classificacao">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Time</th>
+                            <th>PTS</th>
+                            <th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- DEMAIS SEÇÕES -->
+        <section id="times"><h2 class="section-title">🛡️ Equipes</h2><div class="times-grid" id="times-grid"></div></section>
+        <section id="chaveamentos"><h2 class="section-title">🏆 Torneios</h2><div id="chaveamentos-container"></div></section>
+        <section id="noticias"><h2 class="section-title">📰 Notícias</h2><div class="jogos-grid" id="noticias-grid"></div></section>
+        <section id="arquivos"><h2 class="section-title">📂 Arquivos</h2><div class="jogos-grid" id="arquivos-grid"></div></section>
+        
+        <section id="votacao">
+            <h2 class="section-title">🗳️ Enquete Oficial</h2>
+            <div class="placar-card">
+                <h3 id="pergunta-enquete" style="margin-bottom: 1.5rem; font-family: var(--font-display);">Carregando...</h3>
+                <div id="form-enquete">
+                    <div id="opcoes-enquete" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.5rem;"></div>
+                    <button class="btn-primary" onclick="registrarVoto()">Confirmar Voto</button>
+                </div>
+                <div id="resultados-enquete" style="display: none; display: flex; flex-direction: column; gap: 15px;"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION BAR (Principal no Mobile) -->
+    <nav class="bottom-nav">
+        <!-- Estes aparecem sempre no mobile -->
+        <a class="nav-item active" onclick="showSection('home')" id="nav-home">
+            <span class="nav-icon">🏠</span>
+            <span>Início</span>
+        </a>
+        <a class="nav-item" onclick="showSection('jogos')" id="nav-jogos">
+            <span class="nav-icon">⚽</span>
+            <span>Jogos</span>
+        </a>
+        <a class="nav-item" onclick="showSection('classificacao')" id="nav-classificacao">
+            <span class="nav-icon">📊</span>
+            <span>Tabela</span>
+        </a>
+        <a class="nav-item" onclick="toggleSheet()" id="nav-mais">
+            <span class="nav-icon">➕</span>
+            <span>Mais</span>
+        </a>
+        
+        <!-- Estes aparecem APENAS no Desktop na Topbar -->
+        <a class="nav-item desktop-only" onclick="showSection('chaveamentos')" style="display: none;" id="nav-chaveamentos"><span class="nav-icon">🏆</span><span>Chaves</span></a>
+        <a class="nav-item desktop-only" onclick="showSection('times')" style="display: none;" id="nav-times"><span class="nav-icon">🛡️</span><span>Equipes</span></a>
+        <a class="nav-item desktop-only" onclick="showSection('noticias')" style="display: none;" id="nav-noticias"><span class="nav-icon">📰</span><span>Notícias</span></a>
+        <a class="nav-item desktop-only" onclick="showSection('arquivos')" style="display: none;" id="nav-arquivos"><span class="nav-icon">📂</span><span>Arquivos</span></a>
+    </nav>
+
+    <!-- BOTTOM SHEET (Menu Extra Mobile) -->
+    <div class="bottom-sheet-overlay" id="sheet-overlay" onclick="toggleSheet()"></div>
+    <div class="bottom-sheet" id="bottom-sheet">
+        <div class="sheet-handle"></div>
+        <h3 style="margin-bottom: 1.5rem; text-align: center; color: var(--text-muted);">Explore Mais</h3>
+        <div class="sheet-grid">
+            <div class="sheet-btn" onclick="showSection('chaveamentos'); toggleSheet();"><span class="icon">🏆</span> Chaves</div>
+            <div class="sheet-btn" onclick="showSection('times'); toggleSheet();"><span class="icon">🛡️</span> Equipes</div>
+            <div class="sheet-btn" onclick="showSection('noticias'); toggleSheet();"><span class="icon">📰</span> Notícias</div>
+            <div class="sheet-btn" onclick="showSection('arquivos'); toggleSheet();"><span class="icon">📂</span> Arquivos</div>
         </div>
-    </section>
+    </div>
 
     <!-- Scripts -->
     <script src="js/app.js"></script>
+    <script>
+        // Adaptação rápida de Desktop Nav
+        if (window.innerWidth >= 768) {
+            document.querySelectorAll('.desktop-only').forEach(el => el.style.display = 'flex');
+        }
+    </script>
 </body>
 
 </html>
